@@ -22,7 +22,7 @@ export const getOne = async (req, res) => {
 };
 
 export const update = async (req, res) => {
-  const { articleId, } = req.body;
+  const { articleId } = req.body;
   try {
     const data = await articleService.update(articleId);
     res.json({ message: "Update Successful", data });
@@ -32,9 +32,9 @@ export const update = async (req, res) => {
 };
 
 export const Delete = async (req, res) => {
-  const { articleId, } = req.body;
+  const { articleId } = req.body;
   try {
-    const data = await articleService.delete(articleId);
+    const data = await articleService.Delete(articleId);
     res.json({ message: "Delete Successful", data });
   } catch (error) {
     res.status(400).json({ message: error.message });

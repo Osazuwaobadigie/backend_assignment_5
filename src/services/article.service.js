@@ -15,11 +15,11 @@ export const create = async (userId) => {
     throw new Error("User not found");
   }
   
-  return article.create({ user: (userId) });
+  return article.create({ user: userId });
 };
 
 export const getOne = async (articleId) => {
-  return article.findOne({ _id: (articleId) });
+  return article.findOne({ _id: articleId });
 };
 
 export const update = async (articleId,) => {
@@ -31,10 +31,10 @@ export const update = async (articleId,) => {
     throw new Error("User not found");
   }
   
-  return article.update({ user: (userId) });
+  return article.update({ user: userId });
 };
 
 export const Delete = async (articleId) => {
-  return article.deleteOne({ _id: (articleId) });
+  return article.deleteOne({ _id: articleId });
 };
 

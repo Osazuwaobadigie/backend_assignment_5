@@ -7,11 +7,11 @@ const articleRoute = Router();
 // articleRoute.use(authMiddleware);
 
 
-articleRoute.get("/",  articleController.getAllArticles);
-articleRoute.post("/",  articleController.creat);
+articleRoute.get("/",  articleController.getAll);
+articleRoute.post("/",  articleController.create);
 articleRoute.get("/",  articleController.getOne);
 articleRoute.put("/:articleID",  articleController.update);
-articleRoute.delete("/:articleID",  articleController.delete);
+articleRoute.delete("/:articleID",  articleController.Delete);
 
 
 export default articleRoute;
